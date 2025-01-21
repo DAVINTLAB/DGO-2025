@@ -3,6 +3,8 @@ from app_pages.analyzed_comments.categories import categories_page
 from app_pages.analyzed_comments.analyzed_upload import analyzed_upload
 from app_pages.analyzed_comments.individual_files import individual_analysis_page
 from app_pages.default_comments.default_upload import default_upload
+from app_pages.default_comments.general_visualization import general_visualization_page
+from app_pages.default_comments.users_dashboard import users_dashboard_page
 import streamlit as st
 
 st.set_page_config(
@@ -31,10 +33,14 @@ if(main_section == 'Analyzed Comments'):
 
 
 elif(main_section == 'Default Comments'):
-    sub_section = st.sidebar.selectbox('Sub Section', ['Upload File'])
+    sub_section = st.sidebar.selectbox('Sub Section', ['Upload File', 'General Visualization', 'Users Dashboard'])
     match sub_section:
         case 'Upload File':
             default_upload()
+        case 'General Visualization':
+            general_visualization_page()
+        case 'Users Dashboard':
+            users_dashboard_page()
         case _:
             landing_page()
 
