@@ -1,2 +1,6 @@
 *.pyc
 *.pyo
+
+.vscode
+
+ambiente_youtube
