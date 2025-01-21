@@ -2,6 +2,7 @@ from app_pages import landing_page
 from app_pages.analyzed_comments.categories import categories_page
 from app_pages.analyzed_comments.analyzed_upload import analyzed_upload
 from app_pages.analyzed_comments.individual_files import individual_analysis_page
+from app_pages.default_comments.default_upload import default_upload
 import streamlit as st
 
 st.set_page_config(
@@ -33,7 +34,7 @@ elif(main_section == 'Default Comments'):
     sub_section = st.sidebar.selectbox('Sub Section', ['Upload File'])
     match sub_section:
         case 'Upload File':
-            pass
+            default_upload()
         case _:
             landing_page()
 
