@@ -1,6 +1,7 @@
 from app_pages import landing_page
 from app_pages.analyzed_comments.categories import categories_page
 from app_pages.analyzed_comments.analyzed_upload import analyzed_upload
+from app_pages.analyzed_comments.individual_files import individual_analysis_page
 import streamlit as st
 
 st.set_page_config(
@@ -15,12 +16,14 @@ main_section = st.sidebar.selectbox('Main Section', ['Analyzed Comments', 'Defau
 sub_section = ''
 
 if(main_section == 'Analyzed Comments'):
-    sub_section = st.sidebar.selectbox('Sub Section', ['Upload File', 'Categories'])
+    sub_section = st.sidebar.selectbox('Sub Section', ['Upload File', 'Categories', 'Individual Analysis'])
     match sub_section:
         case 'Upload File':
             analyzed_upload()
         case 'Categories':
             categories_page()
+        case 'Individual Analysis':
+            individual_analysis_page()
         case _:
             landing_page()
 
