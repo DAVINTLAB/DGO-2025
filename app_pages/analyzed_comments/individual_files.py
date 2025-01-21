@@ -1,4 +1,4 @@
-from app_pages.analyzed_comments.graphs.graphs import show_general_stats_graph, show_support_graph
+from app_pages.analyzed_comments.graphs.graphs import show_critics_graph, show_general_stats_graph, show_support_graph
 import streamlit as st
 
 def individual_analysis_page():
@@ -14,7 +14,8 @@ def individual_analysis_page():
 
     if file_name:
         show_general_stats_graph(file_name, classification_col)
-        show_support_graph(file_name, classification_col)
+        show_support_graph(file_name)
+        show_critics_graph(file_name)
 
         
 
