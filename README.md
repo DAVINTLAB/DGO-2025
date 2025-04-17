@@ -18,7 +18,7 @@ git clone https://github.com/DAVINTLAB/DGO-2025.git
 cd DGO-2025
 ```
 
-Create a separate environment and install dependancies
+Create a separate environment and install dependancies  
 (May vary depending on OS, but something like this will work)
 
 ```bash
