@@ -31,9 +31,9 @@ pip install -r requirements.txt
 
 2. **Decide which feature you want to run**
 
-Option 1 -> Script to collect video data
+## Option 1 -> Script to collect video data
 
-Option 2 -> Dashboard
+## Option 2 -> Dashboard
 
 ## 📁 Folder structure
 
